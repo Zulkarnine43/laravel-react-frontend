@@ -10,7 +10,7 @@ export default class ExpenseTableRow extends Component {
     }
 
     deleteExpense() {
-        axios.delete('http://127.0.0.1:8000/api/expenses/' + this.props.obj.id)
+        axios.delete('http://localhost/laravel-react-backend/public/api/expenses/' + this.props.obj.id)
             .then((res) => {
                 console.log('Expense removed deleted!')
             }).catch((error) => {

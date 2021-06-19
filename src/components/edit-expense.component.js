@@ -22,7 +22,7 @@ export default class EditExpense extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/expenses/' + this.props.match.params.id)
+    axios.get('http://localhost/laravel-react-backend/public/api/expenses/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           name: res.data.name,
@@ -56,7 +56,7 @@ export default class EditExpense extends Component {
       description: this.state.description
     };
 
-    axios.put('https://laravel-react-expense-manager.herokuapp.com/api/expenses/' + this.props.match.params.id, expenseObject)
+    axios.put('http://localhost/laravel-react-backend/public/api/expenses/' + this.props.match.params.id, expenseObject)
       .then((res) => {
         console.log(res.data)
         console.log('Expense successfully updated')

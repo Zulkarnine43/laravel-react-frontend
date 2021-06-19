@@ -14,7 +14,7 @@ export default class ExpenseList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/expenses/')
+    axios.get('http://localhost/laravel-react-backend/public/api/expenses/')
       .then(res => {
         this.setState({
           expenses: res.data

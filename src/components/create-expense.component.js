@@ -45,7 +45,7 @@ export default class CreateExpense extends Component {
       amount: this.state.amount,
       description: this.state.description
     };
-    axios.post('http://127.0.0.1:8000/api/expenses/', expense)
+    axios.post('http://localhost/laravel-react-backend/public/api/expenses',expense)
       .then(res => console.log(res.data));
     // console.log(`Expense successfully created!`);
     // console.log(`Name: ${this.state.name}`);
